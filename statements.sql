@@ -136,15 +136,15 @@ INSERT INTO usuarios_categorias (id_usuario, id_categoria) VALUES
 
 -- PASO 3
 -- Tu código aquí
+
 SELECT 
-    usuarios.id_usuario, 
-    usuarios.nombre, 
-    usuarios.apellido, 
-    usuarios.email, 
-    usuarios.edad, 
-    roles.nombre_rol, 
+    usuarios.id_usuario,
+    usuarios.nombre,
+    usuarios.apellido,
+    usuarios.email,
+    usuarios.edad,
+    roles.nombre_rol,
     categorias.nombre_categoria
-FROM usuarios
+FROM usuarios 
 JOIN roles ON usuarios.id_rol = roles.id_rol
-JOIN usuarios_categorias ON usuarios.id_usuario = usuarios_categorias.id_usuario
-JOIN categorias ON usuarios_categorias.id_categoria = categorias.id_categoria;
+JOIN categorias ON usuarios.id_categoria = categorias.id_categoria;
